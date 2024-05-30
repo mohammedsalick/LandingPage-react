@@ -1,0 +1,98 @@
+#trainers {
+  padding: 4rem 0;
+}
+
+#trainers .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#trainers .content-left {
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+#trainers .content img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  opacity: 0; /* Start with 0 opacity */
+  transform: translateY(-20px); /* Start slightly above */
+  animation: slideFromTop 1s forwards ease-out; /* Animate opacity and position */
+}
+
+#trainers .content-right p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0; /* Start with 0 opacity */
+  transform: translateY(20px); /* Start slightly below its position */
+  animation: fadeInUp 1s forwards ease-out; /* Animate opacity and position */
+}
+
+/* Add animation keyframes */
+@keyframes slideFromTop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+  #trainers .content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  #trainers .content-left {
+    flex: 0 0 40%;
+    max-width: 40%;
+    margin-bottom: 0;
+  }
+
+  #trainers .content img {
+    max-width: 100%;
+    height: auto;
+    opacity: 0; /* Start with 0 opacity */
+    transform: translateX(-20px); /* Start slightly to the left */
+    animation: slideFromLeft 1s forwards ease-out; /* Animate opacity and position */
+  }
+
+  #trainers .content-right {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  #trainers .content-right p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0; /* Start with 0 opacity */
+    transform: translateX(20px); /* Start slightly to the right */
+    animation: slideFromRight 1s forwards ease-out; /* Animate opacity and position */
+  }
+
+  /* Add animation keyframes */
+  @keyframes slideFromLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideFromRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}

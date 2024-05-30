@@ -1,0 +1,116 @@
+/* Home.css */
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 50px 20px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.content-left,
+.content-right {
+  flex: 1;
+  min-width: 300px;
+  margin: 20px;
+  text-align: center;
+}
+
+.content-left img {
+  width: 100%;
+  max-width: 400px;
+  animation: slideInFromLeft 1s ease-in-out;
+}
+
+content-right {
+  opacity: 0; /* Start with 0 opacity */
+  transform: translateY(20px); /* Start slightly below */
+  animation: fadeInUp 1s forwards ease-out; /* Animate opacity and position */
+}
+
+.content-right p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.highlight {
+  color: #4caf50; /* Green color for the highlighted text */
+}
+
+.animated-text {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  opacity: 0; /* Start with 0 opacity */
+  transform: translateY(20px); /* Start slightly below its position */
+  animation: fadeInUp 1s forwards ease-out; /* Animate opacity and position */
+}
+
+/* Add animation keyframes */
+@keyframes slideFromTop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .content-left,
+  .content-right {
+    flex: 1 1 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .content-left img {
+    max-width: 300px;
+  }
+
+  .content-right h2 {
+    font-size: 1.5rem;
+  }
+
+  .content-right p {
+    font-size: 1rem;
+  }
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

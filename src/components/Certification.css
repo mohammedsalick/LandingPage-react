@@ -1,0 +1,85 @@
+/* Certification.css */
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1e1e1e; /* Same as the Home section background */
+  color: #fff;
+  padding: 50px 20px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.content-left,
+.content-right {
+  flex: 1;
+  min-width: 300px;
+  margin: 20px;
+  text-align: center;
+}
+
+.content-left img {
+  width: 100%;
+  max-width: 400px;
+  animation: slideInFromLeft 1s ease-in-out;
+}
+
+.content-right {
+  animation: slideInFromRight 1s ease-in-out;
+}
+
+.content-right h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.content-right p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #bbb;
+}
+
+.btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
